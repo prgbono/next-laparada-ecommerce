@@ -8,7 +8,7 @@ export type Product = {
   brand?: string
   description: string
   category: string
-  rating?: number
+  rating: number
   numReviews: number
   countInStock: number //TODO: Rename to KgsInStock or simply stock
   stockLimit?: number
