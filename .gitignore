@@ -37,3 +37,10 @@ next-env.d.ts
 
 # TODO file
 TODO.md
+
+# local VSCode settings
+.vscode
+
+# images not optimised
+/public/images/marisco
+/public/images/pescado
