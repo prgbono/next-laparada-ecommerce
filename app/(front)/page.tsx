@@ -1,7 +1,9 @@
 import ProductItem from '@/components/products/ProductItem'
 import data from '@/lib/data'
 
-export default function Home() {
+import React from 'react'
+
+const Home = () => {
   return (
     <>
       <h2 className="text-2xl py-2">Últimos productos</h2>
@@ -13,3 +15,5 @@ export default function Home() {
     </>
   )
 }
+
+export default Home

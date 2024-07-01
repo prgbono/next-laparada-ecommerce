@@ -5,7 +5,7 @@ import React from 'react'
 
 export default function ProductItem({ product }: { product: Product }) {
   return (
-    <div className="card bg-base-300 shadow-xl mb-4">
+    <div data-testid = 'product-item' className="card bg-base-300 shadow-xl mb-4">
       <figure>
         <Link href={`/product/${product.slug}`}>
           <Image
