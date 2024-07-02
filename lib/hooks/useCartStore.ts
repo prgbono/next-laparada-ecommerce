@@ -1,6 +1,7 @@
 import { create } from 'zustand'
 import { round2 } from '../utils'
 import { OrderItem } from '../models/OrderModel'
+import { persist } from 'zustand/middleware'
 
 const IVA_PERCENTAGE = 0.21
 
@@ -20,7 +21,9 @@ const initialState: Cart = {
   totalPrice: 0
 }
 
-export const cartStore = create<Cart>(() => initialState)
+export const cartStore = create<Cart>()(
+  persist(() => initialState, { name: 'cartStore' })
+)
 
 const calcPrice = (items: OrderItem[]) => {
   const itemsPrice = round2(
