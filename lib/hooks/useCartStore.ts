@@ -43,12 +43,29 @@ const useCartService = () => {
     totalPrice,
     // function to add or increase an item in the cart. https://www.youtube.com/watch?v=zWEvbGdUhRg 53'23''
     increase: (item: OrderItem) => {
-      const exist = items.find((x) => x.slug === item.slug)
+      const exist = items.find((x) => x.slug === item.slug) // TODO: DRY
       const updatedCartItems = exist
         ? items.map((x) =>
             x.slug === item.slug ? { ...exist, qty: exist.qty + 1 } : x
           )
         : [...items, { ...item, qty: 1 }]
+      const { itemsPrice, shippingPrice, taxPrice, totalPrice } =
+        calcPrice(updatedCartItems)
+      cartStore.setState({
+        items: updatedCartItems,
+        itemsPrice,
+        shippingPrice,
+        taxPrice,
+        totalPrice
+      })
+    },
+    decrease: (item: OrderItem) => {
+      const exist = items.find((x) => x.slug === item.slug) // TODO: DRY
+      if (!exist) return // no need to change the state
+      const updatedCartItems =
+        exist.qty === 1
+          ? items.filter((x: OrderItem) => x.slug !== item.slug)
+          : items.map((x) => (item.slug ? { ...exist, qty: exist.qty - 1 } : x))
       const { itemsPrice, shippingPrice, taxPrice, totalPrice } =
         calcPrice(updatedCartItems)
       cartStore.setState({
