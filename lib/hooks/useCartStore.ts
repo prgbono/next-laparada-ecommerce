@@ -41,7 +41,7 @@ const useCartService = () => {
     taxPrice,
     shippingPrice,
     totalPrice,
-    // function to add or increase an item in the cart
+    // function to add or increase an item in the cart. https://www.youtube.com/watch?v=zWEvbGdUhRg 53'23''
     increase: (item: OrderItem) => {
       const exist = items.find((x) => x.slug === item.slug)
       const updatedCartItems = exist
