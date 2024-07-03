@@ -1,6 +1,7 @@
 import ProductItem from '@/components/products/ProductItem'
 // import data from '@/lib/data'
 import productService from '@/lib/services/productService'
+import { convertDocToObj } from '@/lib/utils'
 import { Metadata } from 'next'
 import Link from 'next/link'
 
