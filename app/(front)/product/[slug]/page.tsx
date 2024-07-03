@@ -4,7 +4,20 @@ import productService from '@/lib/services/productService'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function ProductDetails({
+export async function generateMetadata({
+  params
+}: {
+  params: { slug: string }
+}) {
+  const product = await productService.getBySlug(params.slug)
+  return product
+    ? {
+        title: product.name,
+        description: product.description
+      }
+    : { title: 'Producto no encontrado' }
+}
+
 export default async function ProductDetails({
   params
 }: {

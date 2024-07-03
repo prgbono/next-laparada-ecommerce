@@ -1,11 +1,16 @@
 import ProductItem from '@/components/products/ProductItem'
 // import data from '@/lib/data'
 import productService from '@/lib/services/productService'
+import { Metadata } from 'next'
 import Link from 'next/link'
 
 import React from 'react'
 
-const Home = () => {
+export const metadata: Metadata = {
+  title: process.env.NEXT_PUBLIC_APP_NAME || 'Pescados y Mariscos La Parada',
+  description:
+    process.env.NEXT_PUBLIC_APP_DESC || 'Pescados y Mariscos La Parada'
+}
 
 const Home = async () => {
   const featuredProducts = await productService.getFeatured()
