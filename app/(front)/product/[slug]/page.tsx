@@ -1,14 +1,17 @@
 import AddToCart from '@/components/products/AddToCart'
 import data from '@/lib/data'
+import productService from '@/lib/services/productService'
 import Image from 'next/image'
 import Link from 'next/link'
 
 export default function ProductDetails({
+export default async function ProductDetails({
   params
 }: {
   params: { slug: string }
 }) {
-  const product = data.products.find((product) => product.slug === params.slug)
+  // const product = data.products.find((product) => product.slug === params.slug)
+  const product = await productService.getBySlug(params.slug)
   return !product ? (
     <h1>Producto no encontrado</h1>
   ) : (
