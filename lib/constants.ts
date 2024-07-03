@@ -1,0 +1,1 @@
+export const CACHE_REVALIDATION_MAX_TIME = 3600

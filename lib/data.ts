@@ -44,7 +44,7 @@ const data = {
       countInStock: 14, //TODO: Rename a KgsInStock
       stockLimit: 5,
       description: 'Pulpo de La Parada',
-      isFeatured: true
+      isFeatured: false
     },
     {
       name: 'Cigalas',
@@ -73,7 +73,7 @@ const data = {
       countInStock: 18, //TODO: Rename a KgsInStock
       stockLimit: 5,
       description: 'Atún de La Parada',
-      isFeatured: true
+      isFeatured: false
     },
     {
       name: 'Huevas',
@@ -87,7 +87,7 @@ const data = {
       countInStock: 12, //TODO: Rename a KgsInStock
       stockLimit: 5,
       description: 'Huevas de La Parada',
-      isFeatured: true
+      isFeatured: false
     },
     {
       name: 'Pescado',
@@ -101,7 +101,7 @@ const data = {
       countInStock: 8.95, //TODO: Rename a KgsInStock
       stockLimit: 5,
       description: 'Pescados de La Parada',
-      isFeatured: true
+      isFeatured: false
     },
     {
       name: 'Patas',
@@ -115,8 +115,7 @@ const data = {
       countInStock: 27, //TODO: Rename a KgsInStock
       stockLimit: 5,
       description: 'Patas de La Parada',
-      isFeatured: true,
-      banner: '/images/optimized/banner/shrimp_lemon.jpg'
+      isFeatured: false
     },
     {
       name: 'Gambones',
@@ -130,7 +129,7 @@ const data = {
       countInStock: 18, //TODO: Rename a KgsInStock
       stockLimit: 5,
       description: 'Gambones de La Parada',
-      isFeatured: true
+      isFeatured: false
     },
     {
       name: 'Langostino Tigre',
@@ -144,8 +143,7 @@ const data = {
       countInStock: 22, //TODO: Rename a KgsInStock
       stockLimit: 5,
       description: 'Tigres de La Parada',
-      isFeatured: true,
-      banner: '/images/optimized/banner/crayfish.jpg'
+      isFeatured: false
     },
     {
       name: 'Bocas',
@@ -159,8 +157,7 @@ const data = {
       countInStock: 26, //TODO: Rename a KgsInStock
       stockLimit: 5,
       description: 'Bocas de La Parada',
-      isFeatured: true,
-      banner: '/images/optimized/banner/prawns.jpg'
+      isFeatured: false
     }
   ]
 }
