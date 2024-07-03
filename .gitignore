@@ -44,3 +44,4 @@ TODO.md
 # images not optimised
 /public/images/marisco
 /public/images/pescado
+.env
